@@ -1,0 +1,1 @@
+./codebuild_build.sh -c -i eost/codebuild/standard -a ${PWD}

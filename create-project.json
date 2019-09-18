@@ -1,0 +1,71 @@
+{
+    "name": "talend_job_handler",
+    "description": "Talend JobHandler wrapper for job2lambda",
+    "source": {
+        "type": "BITBUCKET",
+        "location": "",
+        "gitCloneDepth": 0,
+        "buildspec": "",
+        "auth": {
+            "type": "OAUTH",
+            "resource": ""
+        },
+        "reportBuildStatus": true,
+        "insecureSsl": true,
+        "sourceIdentifier": ""
+    },
+    "artifacts": {
+        "type": "NO_ARTIFACTS",
+        "location": "",
+        "path": "",
+        "namespaceType": "NONE",
+        "name": "",
+        "packaging": "NONE",
+        "overrideArtifactName": true,
+        "encryptionDisabled": true,
+        "artifactIdentifier": ""
+    },
+    "cache": {
+        "type": "S3",
+        "location": ""
+    },
+    "environment": {
+        "type": "WINDOWS_CONTAINER",
+        "image": "",
+        "computeType": "BUILD_GENERAL1_SMALL",
+        "environmentVariables": [
+            {
+                "name": "",
+                "value": "",
+                "type": "PLAINTEXT"
+            }
+        ],
+        "privilegedMode": true,
+        "certificate": ""
+    },
+    "serviceRole": "arn:aws:iam::115057027035:role/service-role/codebuild-eost-aws-codebuild-docker-images-service-role",
+    "timeoutInMinutes": 2,
+    "queuedTimeoutInMinutes": 0,
+    "encryptionKey": "",
+    "tags": [
+        {
+            "key": "User",
+            "value": "eost"
+        },
+        {
+            "key": "Project",
+            "value": "Serverless"
+        }
+    ],
+    "logsConfig": {
+        "cloudWatchLogs": {
+            "status": "DISABLED",
+            "groupName": "",
+            "streamName": ""
+        },
+        "s3Logs": {
+            "status": "DISABLED",
+            "location": ""
+        }
+    }
+}
