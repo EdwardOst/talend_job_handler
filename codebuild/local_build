@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+declare -r local_build_path=$(readlink -e "${BASH_SOURCE[0]}")
+declare -r local_build_dir="${local_build_path%/*}"
+
+cd "${local_build_dir}/.."
+
+mkdir -p target
+
+./codebuild_build.sh -c -i eost/codebuild/standard -a ${PWD}/target

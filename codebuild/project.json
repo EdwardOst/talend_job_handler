@@ -1,0 +1,74 @@
+        {
+            "name": "talend_job_handler",
+            "description": "AWS RequestStreamHandler wrapper for Talend Jobs",
+            "source": {
+                "type": "GITHUB",
+                "location": "https://github.com/EdwardOst/talend_job_handler.git",
+                "gitCloneDepth": 1,
+                "reportBuildStatus": false,
+                "insecureSsl": false
+            },
+            "secondarySources": [],
+            "artifacts": {
+                "type": "S3",
+                "location": "eost-lambda",
+                "path": "",
+                "namespaceType": "BUILD_ID",
+                "name": "talend_job_handler",
+                "packaging": "NONE",
+                "overrideArtifactName": false,
+                "encryptionDisabled": true
+            },
+            "secondaryArtifacts": [],
+            "cache": {
+                "type": "NO_CACHE"
+            },
+            "environment": {
+                "type": "LINUX_CONTAINER",
+                "image": "aws/codebuild/standard:2.0",
+                "computeType": "BUILD_GENERAL1_SMALL",
+                "environmentVariables": [
+                    {
+                        "name": "AWS_ACCOUNT_ID",
+                        "value": "115057027035",
+                        "type": "PLAINTEXT"
+                    }
+                ],
+                "privilegedMode": false
+            },
+            "serviceRole": "arn:aws:iam::115057027035:role/service-role/codebuild-talend_job_handler-service-role",
+            "timeoutInMinutes": 60,
+            "queuedTimeoutInMinutes": 480,
+            "encryptionKey": "arn:aws:kms:us-east-1:115057027035:alias/aws/s3",
+            "tags": [
+                {
+                    "key": "Project",
+                    "value": "Serverless"
+                },
+                {
+                    "key": "User",
+                    "value": "eost"
+                }
+            ],
+            "vpcConfig": {
+                "vpcId": "vpc-0c94f6191207243ff",
+                "subnets": [
+                    "subnet-02f1a7976ea9b5d93",
+                    "subnet-0df8310a81c038b79"
+                ],
+                "securityGroupIds": [
+                    "sg-001c46977a1b76877"
+                ]
+            },
+            "badgeEnabled": false,
+            "logsConfig": {
+                "cloudWatchLogs": {
+                    "status": "ENABLED",
+                    "groupName": "/eost/codebuild",
+                    "streamName": "talend_job_handler"
+                },
+                "s3Logs": {
+                    "status": "DISABLED"
+                }
+            }
+        }
