@@ -16,7 +16,7 @@
 		</Console>
 	</Appenders>
 	<Loggers>
-		<Logger name="se_demo" level="info" additivity="false">
+		<Logger name="studio_serverless" level="info" additivity="false">
 			<AppenderRef ref="JOB"/>
 		</Logger>
 		<Root level="warn">
